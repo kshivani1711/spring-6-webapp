@@ -1,21 +1,28 @@
 package guru.springframework.spring6webapp.domain;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
-@Data
+
 @Entity
+@Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString(exclude = {"books"})
 public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Builder.Default
     @ManyToMany(mappedBy = "authors")
-    private Set<Book> books;
+    private Set<Book> books = new HashSet<>();
 
     private String firstName;
 
@@ -32,4 +39,5 @@ public class Author {
     public int hashCode() {
         return Objects.hash(getId());
     }
+
 }
