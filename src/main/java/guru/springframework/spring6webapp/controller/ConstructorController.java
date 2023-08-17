@@ -4,11 +4,11 @@ import guru.springframework.spring6webapp.services.GreentingService;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class MyController {
+public class ConstructorController {
 
     private final GreentingService greetingService;
 
-    public MyController(GreentingService greetingService) {
+    public ConstructorController(GreentingService greetingService) {
         this.greetingService = greetingService;
     }
     public String sayHello(){

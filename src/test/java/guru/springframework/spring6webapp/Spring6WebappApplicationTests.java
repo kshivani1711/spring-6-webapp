@@ -1,6 +1,6 @@
 package guru.springframework.spring6webapp;
 
-import guru.springframework.spring6webapp.controller.MyController;
+import guru.springframework.spring6webapp.controller.ConstructorController;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -13,7 +13,7 @@ class Spring6WebappApplicationTests {
     ApplicationContext ctx;
 
     @Autowired
-    MyController controller;
+    ConstructorController controller;
 
     @Test
     void sayHello() {
