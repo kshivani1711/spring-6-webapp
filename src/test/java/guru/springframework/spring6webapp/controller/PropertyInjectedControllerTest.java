@@ -5,13 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PropertyInjectionControllerTest {
+class PropertyInjectedControllerTest {
 
     @Autowired
-    PropertyInjectionController propertyInjectionController;
+    PropertyInjectedController propertyInjectedController;
 
     @Test
     void sayHello() {
-        System.out.println(propertyInjectionController.sayHello());
+        System.out.println(propertyInjectedController.sayHello());
     }
 }
