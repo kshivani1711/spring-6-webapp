@@ -1,6 +1,6 @@
 package guru.springframework.spring6webapp.controller;
 
-import guru.springframework.spring6webapp.services.GreentingService;
+import guru.springframework.spring6webapp.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -8,11 +8,11 @@ import org.springframework.stereotype.Controller;
 public class SetterInjectionController {
 
     @Autowired
-    private GreentingService greentingService;
+    private GreetingService greetingService;
 
     public String sayHello(){
         System.out.println("Testing");
-        return greentingService.sayGreeting();
+        return greetingService.sayGreeting();
     }
 
 

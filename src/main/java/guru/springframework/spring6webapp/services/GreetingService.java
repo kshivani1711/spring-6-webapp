@@ -1,5 +1,5 @@
 package guru.springframework.spring6webapp.services;
 
-public interface GreentingService {
+public interface GreetingService {
     String sayGreeting();
 }

@@ -1,15 +1,15 @@
 package guru.springframework.spring6webapp.controller;
 
-import guru.springframework.spring6webapp.services.GreentingService;
+import guru.springframework.spring6webapp.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class PropertyInjectionController {
   @Autowired
-  GreentingService greentingService;
+  GreetingService greetingService;
 
     public String sayHello(){
-      return greentingService.sayGreeting();
+      return greetingService.sayGreeting();
     }
 }
